@@ -12,3 +12,5 @@ mongo_client = MongoClient(
 )
 
 db = mongo_client.testDb
+collection = db.productManagement
+from backend import routes  # noqa

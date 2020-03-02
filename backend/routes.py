@@ -23,3 +23,8 @@ def add_product():
         'status': 400,
         'message': 'Bad request'
     })
+
+
+@app.route('/sell-product', methods=['GET', 'POST'])
+def sell_proudct():
+    pass
