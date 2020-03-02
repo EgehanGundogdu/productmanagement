@@ -3,7 +3,7 @@ from backend.application import app, collection
 from flask import jsonify, request
 
 
-@app.route('/')
+@app.route('/api')
 def hello():
 
     return jsonify({
@@ -11,7 +11,7 @@ def hello():
     })
 
 
-@app.route('/add-product', methods=['POST'])
+@app.route('/api/add-product', methods=['POST'])
 def add_product():
     if request.method == 'POST':
         data = request.get_json()
