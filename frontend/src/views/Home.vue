@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     <navigation></navigation>
-    <router-view></router-view>
+    <transition name="fade" mode="out-in">
+      <router-view></router-view
+    ></transition>
     <bottom-nav></bottom-nav>
   </div>
 </template>
