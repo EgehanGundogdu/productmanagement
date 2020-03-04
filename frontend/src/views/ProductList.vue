@@ -5,10 +5,7 @@
         <div class="card-body">
           <h3>Ürün Listesi</h3>
           <hr />
-          <table
-            v-if="status"
-            class="table table-hover table-striped table-bordered"
-          >
+          <table class="table table-hover table-striped table-bordered">
             <thead>
               <th>id</th>
               <th>Ürün Adı</th>
@@ -28,7 +25,7 @@
               </tr>
             </tbody>
           </table>
-          <div v-else class="alert alert-warning">
+          <div class="alert alert-warning">
             <strong>Henüz Burada Bir Kayıt Bulamadık</strong>
             <br />
             <small :to="{ name: 'AddProduct' }"
@@ -48,9 +45,10 @@
 <script>
 export default {
   data() {
-    return {
-      status: false
-    };
+    return {};
+  },
+  created() {
+    this.$store.dispatch("initProducts");
   }
 };
 </script>
