@@ -3,11 +3,11 @@ from backend.application import app, collection
 from flask import jsonify, request
 
 
-@app.route('/api')
+@app.route('/api/getproducts')
 def hello():
-
+    results = [i.pop('_id') for i in list(collection.find({}))]
     return jsonify({
-        'results': list(collection.find({}))
+        'results': results
     })
 
 
